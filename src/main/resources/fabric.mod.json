@@ -1,0 +1,29 @@
+{
+	"schemaVersion": 1,
+	"id": "hardcore-cheats",
+	"version": "${version}",
+	"name": "Hardcore Cheats",
+	"description": "This mod allows to enable cheats in singe player hardcore worlds.",
+	"authors": [
+		"FuchsO7"
+	],
+	"contact": {
+		"sources": ""
+	},
+	"license": "MIT",
+	"icon": "assets/hardcore-cheats/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"de.hardcorecheats.HardcoreCheats"
+		]
+	},
+	"mixins": [
+		"hardcore-cheats.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.2",
+		"java": ">=25"
+	}
+}
