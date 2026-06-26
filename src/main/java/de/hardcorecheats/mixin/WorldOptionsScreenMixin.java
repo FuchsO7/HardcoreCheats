@@ -9,12 +9,18 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(WorldOptionsScreen.class)
 public class WorldOptionsScreenMixin {
-    @Redirect(method = "createAllowCommandsButton", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/server/IntegratedServer;isHardcore()Z"))
+    @Redirect(
+            at = @At(value = "INVOKE", target = "Lnet/minecraft/client/server/IntegratedServer;isHardcore()Z"),
+            method = "createAllowCommandsButton"
+    )
     private static boolean enableCommandsButtonInHardcore(IntegratedServer instance) {
         return false;
     }
 
-    @Redirect(method = "updateButton", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/server/IntegratedServer;isHardcore()Z"))
+    @Redirect(
+            at = @At(value = "INVOKE", target = "Lnet/minecraft/client/server/IntegratedServer;isHardcore()Z"),
+            method = "updateButton"
+    )
     private static boolean enableGameRuleAndGameModeButtonInHardcore(IntegratedServer instance) {
         return false;
     }

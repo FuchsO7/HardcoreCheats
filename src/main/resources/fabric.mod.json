@@ -8,7 +8,7 @@
 		"FuchsO7"
 	],
 	"contact": {
-		"sources": ""
+		"sources": "https://github.com/FuchsO7/HardcoreCheats.git"
 	},
 	"license": "MIT",
 	"icon": "assets/hardcore-cheats/icon.png",
@@ -23,7 +23,7 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.19.3",
-		"minecraft": "~26.2",
+		"minecraft": ">=26.2",
 		"java": ">=25"
 	}
 }
