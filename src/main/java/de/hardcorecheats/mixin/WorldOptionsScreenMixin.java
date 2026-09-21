@@ -13,7 +13,7 @@ public class WorldOptionsScreenMixin {
             at = @At(value = "INVOKE", target = "Lnet/minecraft/client/server/IntegratedServer;isHardcore()Z"),
             method = "createAllowCommandsButton"
     )
-    private static boolean enableCommandsButtonInHardcore(IntegratedServer instance) {
+    private static boolean hardcorecheats$enableCommandsButtonInHardcore(IntegratedServer instance) {
         return false;
     }
 
@@ -21,7 +21,7 @@ public class WorldOptionsScreenMixin {
             at = @At(value = "INVOKE", target = "Lnet/minecraft/client/server/IntegratedServer;isHardcore()Z"),
             method = "updateButton"
     )
-    private static boolean enableGameRuleAndGameModeButtonInHardcore(IntegratedServer instance) {
+    private static boolean hardcorecheats$enableGameRuleAndGameModeButtonInHardcore(IntegratedServer instance) {
         return false;
     }
 }
